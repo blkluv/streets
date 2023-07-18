@@ -3,7 +3,7 @@ import classes from './LoadingScreen.scss';
 import {AtomsContext} from "~/app/ui/UI";
 import {useRecoilValue} from "recoil";
 
-const IssuesURL = 'https://github.com/StrandedKitty/streets-gl/issues';
+const IssuesURL = 'https://github.com/blkluv/streets/issues';
 
 const LoadingScreen: React.FC = () => {
 	const atoms = useContext(AtomsContext);
