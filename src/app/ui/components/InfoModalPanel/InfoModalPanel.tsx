@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./InfoModalPanel.scss";
 import ModalPanel from "~/app/ui/components/ModalPanel";
-import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoDiscord } from "react-icons/io5";
 import ModalCategoryContainer from "~/app/ui/components/ModalPanel/ModalCategoryContainer";
 import ModalCategory from "~/app/ui/components/ModalPanel/ModalCategory";
 import ModalPar from "~/app/ui/components/ModalPanel/ModalPar";
@@ -9,7 +9,7 @@ import ModalParAnchor from "~/app/ui/components/ModalPanel/ModalParAnchor";
 import ModalButton from "~/app/ui/components/ModalButton";
 
 const RepositoryURL = "https://arvrtise.com";
-const DiscordURL = "https://discord.gg/bewggJ3eMC";
+const DiscordURL = "https://discord.gg/nfAmqTGNAU";
 
 const Key: React.FC<{ text: string }> = ({ text }) => {
   return <kbd className={styles.keyboardKey}>{text}</kbd>;
@@ -73,7 +73,7 @@ const InfoModalPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       <ModalCategoryContainer>
         <ModalCategory>
           <ModalPar isSmall={true}>
-            Arvrtise 3D Map{VERSION}{" "}
+            Arvrtise 3D Map 
             <ModalParAnchor
               href={`https://arvrtise.com`}
             >
@@ -84,13 +84,10 @@ const InfoModalPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           <ModalPar>
             <div className={styles.links}>
               <a className={styles.anchor} href={RepositoryURL} target={"_blank"}>
-                <ModalButton
-                  text={"ARVRTISE website"}
-                  icon={<IoLogoGithub size={16} />}
-                />
+                <ModalButton text={"Arvrtise website"} icon={"🅰️"} />
               </a>
               <a className={styles.anchor} href={DiscordURL} target={"_blank"}>
-                <ModalButton text={"ARVRTISE Discord"} icon={"🅰️"} />
+                <ModalButton text={"Arvrtise Discord"} icon={<IoLogoDiscord size={16} />} />
               </a>
             </div>
           </ModalPar>
