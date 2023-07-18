@@ -1,6 +1,5 @@
-export default React.memo(InfoModalPanel);
 import React from "react";
-import styles from './InfoModalPanel.scss';
+import styles from "./InfoModalPanel.scss";
 import ModalPanel from "~/app/ui/components/ModalPanel";
 import { IoLogoGithub } from "react-icons/io5";
 import ModalCategoryContainer from "~/app/ui/components/ModalPanel/ModalCategoryContainer";
@@ -9,8 +8,8 @@ import ModalPar from "~/app/ui/components/ModalPanel/ModalPar";
 import ModalParAnchor from "~/app/ui/components/ModalPanel/ModalParAnchor";
 import ModalButton from "~/app/ui/components/ModalButton";
 
-const RepositoryURL = 'https://arvrtise.com';
-const DiscordURL = 'https://discord.gg/nfAmqTGNAU';
+const RepositoryURL = "https://arvrtise.com";
+const DiscordURL = "https://discord.gg/bewggJ3eMC";
 
 const Key: React.FC<{ text: string }> = ({ text }) => {
   return <kbd className={styles.keyboardKey}>{text}</kbd>;
@@ -20,17 +19,15 @@ const KeysConfig: { keys: JSX.Element; desc: string }[] = [
   // Key configurations...
 ];
 
-const InfoModalPanel: React.FC<{
-  onClose: () => void;
-}> = ({ onClose }) => {
+const InfoModalPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalPanel title={"Information"} onClose={onClose}>
       <ModalCategoryContainer>
         <ModalCategory>
           <ModalPar isSmall={true}>
-            Arvrtise 3D Map {VERSION}{" "}
+            Streets GL v{VERSION}{" "}
             <ModalParAnchor
-              href={`https://arvrtise.com`}
+              href={`https://github.com/StrandedKitty/streets-gl/commit/${COMMIT_SHA}`}
             >
               {COMMIT_SHA.slice(0, 7)}
             </ModalParAnchor>{" "}
