@@ -16,7 +16,55 @@ const Key: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const KeysConfig: { keys: JSX.Element; desc: string }[] = [
-  // Key configurations...
+  {
+    keys: (
+      <>
+        <Key text="W" /> <Key text="A" /> <Key text="S" /> <Key text="D" /> (+{" "}
+        <Key text="Shift" /> ) or left mouse button
+      </>
+    ),
+    desc: "Camera movement",
+  },
+  {
+    keys: (
+      <>
+        <Key text="Q" /> <Key text="E" /> <Key text="R" /> <Key text="F" /> or right mouse button
+      </>
+    ),
+    desc: "Camera pitch and yaw",
+  },
+  {
+    keys: <>Middle mouse button</>,
+    desc: "2x camera zoom",
+  },
+  {
+    keys: <Key text="Tab" />,
+    desc: "Toggle between ground camera mode (default) and free camera mode",
+  },
+  {
+    keys: (
+      <>
+        <Key text="Ctrl" /> + <Key text="P" />
+      </>
+    ),
+    desc: "Purge all loaded tiles",
+  },
+  {
+    keys: (
+      <>
+        <Key text="Ctrl" /> + <Key text="U" />
+      </>
+    ),
+    desc: "Toggle UI visibility",
+  },
+  {
+    keys: (
+      <>
+        <Key text="Ctrl" /> + <Key text="B" />
+      </>
+    ),
+    desc: "Pause air traffic",
+  },
 ];
 
 const InfoModalPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -25,9 +73,9 @@ const InfoModalPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       <ModalCategoryContainer>
         <ModalCategory>
           <ModalPar isSmall={true}>
-            Streets GL v{VERSION}{" "}
+            Arvrtise 3D Map{VERSION}{" "}
             <ModalParAnchor
-              href={`https://github.com/StrandedKitty/streets-gl/commit/${COMMIT_SHA}`}
+              href={`https://arvrtise.com`}
             >
               {COMMIT_SHA.slice(0, 7)}
             </ModalParAnchor>{" "}
